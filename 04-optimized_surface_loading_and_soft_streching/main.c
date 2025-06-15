@@ -100,7 +100,7 @@ bool init() {
         return true;
     }
 
-    gWindow = SDL_CreateWindow("03 - Event Driven Programming", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIDTH, HEIGHT, SDL_WINDOW_SHOWN);
+    gWindow = SDL_CreateWindow("04-optimized_surface_loading_and_soft_streching", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIDTH, HEIGHT, SDL_WINDOW_SHOWN);
 
     if (!gWindow) {
         fprintf(stderr,"Erro na criação da janela: %s\n", SDL_GetError());
@@ -116,31 +116,31 @@ bool init() {
 
 bool load_media() {
 
-    gKeyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] = loadSurface("../Images/image_1.bmp");
+    gKeyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] = loadSurface("../Images/bmp/image_1.bmp");
     if (gKeyPressSurfaces[KEY_PRESS_SURFACE_DEFAULT] == NULL) {
         fprintf(stderr, "Deu erro ao carregar a imagem!\n");
         return true;
     }
 
-    gKeyPressSurfaces[KEY_PRESS_SURFACE_UP] = loadSurface("../Images/image_2.bmp");
+    gKeyPressSurfaces[KEY_PRESS_SURFACE_UP] = loadSurface("../Images/bmp/image_2.bmp");
     if (gKeyPressSurfaces[KEY_PRESS_SURFACE_UP] == NULL) {
         fprintf(stderr, "Deu erro ao carregar a imagem!\n");
         return true;
     }
 
-    gKeyPressSurfaces[KEY_PRESS_SURFACE_DOWN] = loadSurface("../Images/image_3.bmp");
+    gKeyPressSurfaces[KEY_PRESS_SURFACE_DOWN] = loadSurface("../Images/bmp/image_3.bmp");
     if (gKeyPressSurfaces[KEY_PRESS_SURFACE_DOWN] == NULL) {
         fprintf(stderr, "Deu erro ao carregar a imagem!\n");
         return true;
     }
 
-    gKeyPressSurfaces[KEY_PRESS_SURFACE_LEFT] = loadSurface("../Images/image_4.bmp");
+    gKeyPressSurfaces[KEY_PRESS_SURFACE_LEFT] = loadSurface("../Images/bmp/image_4.bmp");
     if (gKeyPressSurfaces[KEY_PRESS_SURFACE_LEFT] == NULL) {
         fprintf(stderr, "Deu erro ao carregar a imagem\n");
         return true;
     }
 
-    gKeyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] = loadSurface("../Images/image_5.bmp");
+    gKeyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] = loadSurface("../Images/bmp/image_5.bmp");
     if (gKeyPressSurfaces[KEY_PRESS_SURFACE_RIGHT] == NULL) {
         fprintf(stderr, "Deu erro ao carregar a imagem\n");
         return true;
