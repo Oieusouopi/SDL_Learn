@@ -24,3 +24,8 @@ target_link_libraries(04-optimized_surface_loading_and_soft_streching ${SDL2_LIB
 add_executable(05_extension_libraries_and_loading_other_image_formats 05_extension_libraries_and_loading_other_image_formats/main.c)
 target_link_libraries(05_extension_libraries_and_loading_other_image_formats ${SDL2_LIBRARIES})
 target_link_libraries(05_extension_libraries_and_loading_other_image_formats SDL2 SDL2_image)
+
+
+add_executable(06_geometry_rendering 06_Geometry_rendering/main.c)
+target_link_libraries(06_geometry_rendering ${SDL2_LIBRARIES})
+target_link_libraries(06_geometry_rendering SDL2 SDL2_image)
