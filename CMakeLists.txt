@@ -29,3 +29,7 @@ target_link_libraries(05_extension_libraries_and_loading_other_image_formats SDL
 add_executable(06_geometry_rendering 06_Geometry_rendering/main.c)
 target_link_libraries(06_geometry_rendering ${SDL2_LIBRARIES})
 target_link_libraries(06_geometry_rendering SDL2 SDL2_image)
+
+add_executable(07_ViewPort 07_ViewPort/main.c)
+target_link_libraries(07_ViewPort ${SDL2_LIBRARIES})
+target_link_libraries(07_ViewPort SDL2 SDL2_image)
