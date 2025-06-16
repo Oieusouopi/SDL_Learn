@@ -24,19 +24,19 @@ bool init();
 bool loadMedia();
 
 // Fechar o SDL
-void close_SDL(int status);
+void closeSDL(int status);
 
 int main() {
     if (init()) {
         printf("Aconteceu algum erro");
-        close_SDL(EXIT_FAILURE);
+        closeSDL(EXIT_FAILURE);
     }
 
     while (true) {
         SDL_Event event;
         while (SDL_PollEvent(&event) != 0) {
             if (event.type == SDL_QUIT) {
-                close_SDL(EXIT_SUCCESS);
+                closeSDL(EXIT_SUCCESS);
             }
         }
 
@@ -93,7 +93,7 @@ bool init() {
     return false;
 }
 
-void close_SDL(int status) {
+void closeSDL(int status) {
     SDL_DestroyRenderer(gRenderer);
     gRenderer = NULL;
 

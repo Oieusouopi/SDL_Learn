@@ -26,17 +26,17 @@ bool init();
 bool loadMedia();
 
 // Frees media and shut down SDL
-void close_SDL(int status);
+void closeSDL(int status);
 
 int main() {
     // Start up SDL and create Window
     if (init()) {
         printf("Teve alguma falha");
-        close_SDL(EXIT_FAILURE);
+        closeSDL(EXIT_FAILURE);
     } else {
         if (!loadMedia()) {
             printf("Teve algum erro ao carregar a imagem");
-            close_SDL(EXIT_FAILURE);
+            closeSDL(EXIT_FAILURE);
         } else {
             // Apply the image
             SDL_BlitSurface(gHelloWorld, NULL, gScreenSurface, NULL);
@@ -56,7 +56,7 @@ int main() {
         }
     }
 
-    close_SDL(EXIT_SUCCESS);
+    closeSDL(EXIT_SUCCESS);
     return 0;
 }
 
@@ -91,7 +91,7 @@ bool loadMedia() {
     return success;
 }
 
-void close_SDL(int status) {
+void closeSDL(int status) {
     // Deallocate surface
     SDL_FreeSurface(gHelloWorld);
     gHelloWorld = NULL;

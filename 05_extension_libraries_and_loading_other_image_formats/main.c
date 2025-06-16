@@ -13,7 +13,7 @@
 bool init();
 
 //Frees media and shuts down SDL
-void close_SDL(int status);
+void closeSDL(int status);
 
 //Loads media
 bool load_media();
@@ -36,12 +36,12 @@ SDL_Texture* gTexture = NULL;
 int main() {
     if (init()) {
         fprintf(stderr, "Deu algum erro");
-        close_SDL(EXIT_FAILURE);
+        closeSDL(EXIT_FAILURE);
     }
 
     if (load_media()) {
         fprintf(stderr, "Deu algum erro");
-        close_SDL(EXIT_FAILURE);
+        closeSDL(EXIT_FAILURE);
     }
 
     while (true) {
@@ -49,7 +49,7 @@ int main() {
         SDL_Event event;
         while (SDL_PollEvent( &event )) {
             if (event.type == SDL_QUIT) {
-                close_SDL(EXIT_SUCCESS);
+                closeSDL(EXIT_SUCCESS);
             }
         }
 
@@ -130,7 +130,7 @@ SDL_Texture* loadTexture(char path[]) {
     return newTexture;
 }
 
-void close_SDL(int status) {
+void closeSDL(int status) {
     // Imagem Carregada
     SDL_DestroyTexture(gTexture);
     gTexture = NULL;
